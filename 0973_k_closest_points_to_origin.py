@@ -16,3 +16,9 @@ class Solution:
             if len(heap) > k:
                 heapq.heappop(heap)
         return [item[1] for item in heap]
+
+
+class Solution2:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        points.sort(key = lambda point: point[0]**2 + point[1]**2)
+        return points[:k]

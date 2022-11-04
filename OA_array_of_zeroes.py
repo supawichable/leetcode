@@ -12,5 +12,3 @@ def arrayOfZeroes(arr, m):
         else:
             left = mid + 1
     return left
-
-print(arrayOfZeroes([5,6,3,8], 5))

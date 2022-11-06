@@ -1,6 +1,6 @@
 '''
 1231. Divide Chocolate
-https://leetcode.com/problems/divide-chocolate/description/
+https://leetcode.com/problems/divide-chocolate/
 '''
 
 class Solution:

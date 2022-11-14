@@ -1,4 +1,4 @@
-NOT_CAPITALIZE = {'and', 'in', 'on', 'or', 'under', 'upon', 'with', 'within'}
+NOT_CAPITALIZE = {'a', 'and', 'by', 'in', 'of', 'on', 'or', 'the', 'to', 'under', 'upon', 'with', 'within'}
 IMPORTS = {
     'heapq': 'import heapq',
     'math': 'import math',

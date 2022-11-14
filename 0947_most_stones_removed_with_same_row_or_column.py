@@ -4,7 +4,7 @@ https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
 '''
 
 
-from collections import defaultdict
+from collections import defaultdict, deque
 
 
 class Solution:

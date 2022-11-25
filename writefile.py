@@ -5,7 +5,8 @@ IMPORTS = {
 }
 FROMS = {
     'collections': ['defaultdict', 'deque', 'Counter'],
-    'functools': ['cache']
+    'functools': ['cache'],
+    'itertools': ['product']
 }
 
 def create_file():

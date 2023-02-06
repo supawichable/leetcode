@@ -6,13 +6,25 @@ https://leetcode.com/problems/3sum/
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        def twoSum(nums, target, ans):
-            mem = dict()
-            for i, n in enumerate(nums):
-                if target - n in mem:
-                    ans.add(tuple(sorted((-target, target - n, n))))
-                mem[n] = i
-        ans = set()
+        res = []
+        nums.sort()
         for i, num in enumerate(nums):
-            twoSum(nums[i+1:], -num, ans)
-        return [list(x) for x in ans]
+            if i == 0 or nums[i] != nums[i-1]:
+                self.twoSum(nums, i, -num, res)
+        return res
+
+
+    def twoSum(self, nums, idx, target, res):
+        lo, hi = idx + 1, len(nums) - 1
+        while lo < hi:
+            summ = nums[lo] + nums[hi]
+            if summ > target:
+                hi -= 1
+            elif summ < target:
+                lo += 1
+            else:
+                res.append([-target, nums[lo], nums[hi]])
+                lo += 1
+                hi -= 1
+                while lo < hi and nums[lo] == nums[lo-1]:
+                    lo += 1
